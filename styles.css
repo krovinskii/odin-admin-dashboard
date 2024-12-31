@@ -1,0 +1,28 @@
+* { 
+    margin: 0;
+    padding: 0;
+
+}
+#dashboardContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+#navPanel, #topPanel, #main {
+    border: 1px solid black;
+}
+#navPanel {
+    grid-row: 1 / -1;
+}
+#topPanel {
+    grid-column: 2 /-1;
+}
+#main {
+    grid-column: 2 /-1;
+    grid-row: 2/-1;
+}
