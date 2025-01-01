@@ -6,7 +6,7 @@
 #dashboardContainer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows:  10rem repeat(5, 1fr);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -51,4 +51,47 @@
 }
 #dashboardLogo {
     gap: 2.5rem; 
+}
+#topPanelTopRowContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Top Panel Left Side */
+#searchContainer {
+    display: flex;
+    max-height: 15%;
+    max-width: 60%;
+    margin-top: 2%;
+    margin-left: 2%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#searchContainer img {
+    height: clamp(1rem, 1.5rem, 1.5rem);
+}
+#searchContainer input {
+    outline: none;
+    width: 30rem;
+    height: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    background-color: aliceblue;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+/* Top Panel Right Side */ 
+#rightContainerTopPanel img {
+    height: clamp(1rem, 1.5rem, 1.5rem);
+}
+#rightContainerTopPanel {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 2%;
+}
+#userProfileName {
+    margin-top: 2%;
 }
