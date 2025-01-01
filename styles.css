@@ -83,15 +83,16 @@
     margin: 0;
 }
 /* Top Panel Right Side */ 
-#rightContainerTopPanel img {
+#topProfile {
     height: clamp(1rem, 1.5rem, 1.5rem);
+}
+#userProfilePic {
+    height: clamp(2rem, 2.5rem, 2.5rem);
 }
 #rightContainerTopPanel {
     display: flex;
     gap: 1rem;
     align-items: center;
     margin-right: 2%;
-}
-#userProfileName {
     margin-top: 2%;
 }
