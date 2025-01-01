@@ -21,8 +21,34 @@
 }
 #topPanel {
     grid-column: 2 /-1;
+    grid-row: 1 / 2;
 }
 #main {
     grid-column: 2 /-1;
     grid-row: 2/-1;
+}
+
+.navPanel img {
+    height: clamp(1rem, 2rem, 2rem);
+}
+.navPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 1rem;
+}
+#homeContainer, #settingsContainer {
+    margin-top: 3rem;
+}
+#navPanelContainer {
+    margin-top: 1rem;
+}
+#dashboardLogo img {
+    height: clamp(1.8rem, 2.4rem, 2.5rem);
+    
+}
+#dashboardLogo {
+    gap: 2.5rem; 
 }
