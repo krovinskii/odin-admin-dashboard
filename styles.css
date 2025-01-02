@@ -11,14 +11,14 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 12rem 1fr;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: absolute;
+    left: 0;
     margin: 0;
     padding: 0;
 }
 #navPanel, #topPanel, #main {
-    border: 1px solid black;
-    height: 100vh;
+    height: 100%;
 }
 #navPanel {
     grid-row: 1 / -1;
@@ -30,6 +30,10 @@
 #main {
     grid-column: 2 /-1;
     grid-row: 2/-1;
+    height: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    
     
 }
 
@@ -50,6 +54,8 @@
 }
 #navPanelContainer {
     margin-top: 1rem;
+    height: 100%;
+
 }
 #dashboardLogo img {
     height: clamp(1.8rem, 2.4rem, 2.5rem);
@@ -107,10 +113,12 @@
 #topPanelBottomContainer {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 2%;
+    padding-bottom<img class="trendingImg" src="icons/profile.svg">
+    <h8 class="trendingAt">@profile</h8>
+    <p class="trendingProjectName">project name</p>: 1%;
     padding-left: 2%;
     padding-right: 2%;
-    padding-top: 1.7%;
+    padding-top: 1%;
     position: relative;
     align-items: center;
 }
@@ -147,15 +155,15 @@
 }
 
 /*Main Section*/
-#cardContainer div {
-    border: 1px solid black;
-}
+
 #cardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr .75fr;
-    position: relative;
     margin: 1rem 2rem 0rem 1rem;
+    height: 100%;
+    box-sizing: border-box;
     gap: 2rem;
+
 }
 .card {
     display: grid;
@@ -166,7 +174,7 @@
 .cardTitle {
    grid-row: 1 / 1;
    grid-column: 1 / 9; 
-   padding-top: 1.5rem;
+   padding-top: 1rem;
    padding-left: 1.5rem;
 }
 .cardContent {
@@ -257,4 +265,35 @@
 .announcements hr {
     width: 80%;
     color: black;
+}
+
+/*TRENDING*/
+.trending {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: left;
+}
+.trendingTrioHolder {
+    display: flex;
+    margin: 1rem;
+    gap: 1rem;
+    align-items: center;
+    
+    
+}
+.trendingText {
+    display:flex;
+    flex-direction: column;
+}
+.trendingImg {
+    height: 4rem;
+    width: auto;
+    object-fit: contain;
+}
+.trendingAt {
+    font-size: .75rem;
+}
+.trendingProjectName {
+    font-size: 1rem;
 }
