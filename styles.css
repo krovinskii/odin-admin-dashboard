@@ -6,40 +6,32 @@
 *::before, *::after {
     box-sizing: border-box;
 }
+/*--------------------------------Main Container-------------------------------- */
 #dashboardContainer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 12rem 1fr;
     height: 100vh;
     width: 100vw;
-    position: absolute;
-    left: 0;
-    margin: 0;
-    padding: 0;
 }
-#navPanel, #topPanel, #main {
-    height: 100%;
-}
+/*--------------------------------three main sections--------------------------------*/
 #navPanel {
     grid-row: 1 / -1;
 }
 #topPanel {
     grid-column: 2 /-1;
     grid-row: 1 / 2;
+    box-shadow: 0 4px 2px -2px gray;
+    border-bottom: 2px solid #292524;
+    padding-top: 1%;
 }
 #main {
     grid-column: 2 /-1;
     grid-row: 2/-1;
     height: 100%;
     margin-bottom: 10px;
-    box-sizing: border-box;
-    
-    
 }
-
-.navPanel img {
-    height: clamp(1rem, 2rem, 2rem);
-}
+/*--------------------------------NAV PANEL--------------------------------*/
 .navPanel {
     display: flex;
     flex-direction: row;
@@ -47,34 +39,42 @@
     align-items: center;
     gap: 3rem;
     margin: 0 1rem;
-    
+    color:#fef2f2;
+    font-weight: 600;
+    padding-bottom: .4rem;
+}
+#navPanelContainer {
+    height: 100vh;
+    background-color: #dc2626;
+    padding-top: .8rem;
+}
+.navPanel img {
+    height: clamp(1rem, 1.8rem, 2.2rem);
+    filter: brightness(0) invert(1);
 }
 #homeContainer, #settingsContainer {
     margin-top: 3rem;
 }
-#navPanelContainer {
-    margin-top: 1rem;
-    height: 100%;
-
-}
 #dashboardLogo img {
-    height: clamp(1.8rem, 2.4rem, 2.5rem);
-    
+    height: clamp(1.8rem, 2.4rem, 2.5rem);  
 }
 #dashboardLogo {
     gap: 2.5rem; 
+    font-weight:800;
+    font-size: 1.3;
 }
+/*--------------------------------TOP PANEL--------------------------------*/
+
 #topPanelTopRowContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-/*Top Panel Left Side */
+/*--------------------------------Top Panel Left Side-------------------------------- */
 #searchContainer {
     display: flex;
     max-height: 15%;
-    max-width: 60%;
-    padding-top: 1%;
+    width: 60%;
     padding-left: 2%;
     justify-content: center;
     align-items: center;
@@ -85,44 +85,45 @@
 }
 #searchContainer input {
     outline: none;
-    width: 30rem;
+    width: 100%;
     height: 2rem;
     border-radius: 10px;
     text-align: left;
-    background-color: aliceblue;
+    background-color: #fecaca;
     border: 0;
     padding: 0;
     margin: 0;
 }
-/* Top Panel Right Side */ 
+/* --------------------------------Top Panel Right Side-------------------------------- */ 
+#rightContainerTopPanel {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-right: 2%;
+}
 #topProfile {
     height: clamp(1rem, 1.5rem, 1.5rem);
 }
 #userProfilePic {
     height: clamp(2rem, 2.5rem, 2.5rem);
 }
-#rightContainerTopPanel {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    padding-right: 2%;
-    padding-top: 2%;
-}
 
-/*Top Panel Bottom */
+#userProfileName {
+    font-weight: 600;
+    color: black;
+}
+/*--------------------------------Top Panel Bottom-------------------------------- */
 #topPanelBottomContainer {
     display: flex;
     justify-content: space-between;
-    padding-bottom<img class="trendingImg" src="icons/profile.svg">
-    <h8 class="trendingAt">@profile</h8>
-    <p class="trendingProjectName">project name</p>: 1%;
+    padding-bottom: 1%;
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 1%;
     position: relative;
     align-items: center;
 }
-/*TP Bottom Left */
+/*--------------------------------TP Bottom Left-------------------------------- */
 #tpBottomUserProfilePic {
     height: clamp(4rem, 5rem, 6rem);
 }
@@ -137,12 +138,14 @@
 }
 #tpBottomHello {
     font-size: .9rem;
+    font-weight: 500;
 }
 #tpBottomUsername {
     font-size: 1.3rem;
+    font-weight: 600;
 }
 
-/*TP Bottom Left */
+/*--------------------------------TP BOTTOM RIGHT-------------------------------- */
 #tpBottomRightContainer {
     display: flex;
     gap: 1.6rem;
@@ -152,17 +155,21 @@
     width: 6rem;
     border-radius: 15px;
     border: 0;
+    background-color: #ef4444;
+    color: #fef2f2;
+    font-weight: 600;
 }
 
-/*Main Section*/
+/*--------------------------------CARD SECTION--------------------------------*/
 
 #cardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr .75fr;
-    margin: 1rem 2rem 0rem 1rem;
     height: 100%;
+    padding: 1rem 2rem 0rem 1rem;
     box-sizing: border-box;
     gap: 2rem;
+    
 
 }
 .card {
@@ -170,6 +177,10 @@
     grid-template-columns: .5fr repeat(7, 1fr);
     grid-template-rows: .3fr 1fr 1fr 1fr 1fr;
     box-sizing: border-box;
+    background-color: white;
+    border-left: 5px solid #991b1b;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .cardTitle {
    grid-row: 1 / 1;
@@ -182,26 +193,6 @@
     grid-column: 1 / 9;
     padding-left: 1.5rem;
 }
-/*#fav {
-    grid-column: 8;
-    grid-row: 5;
-    justify-self: end;
-    align-self: center;
-
-}
-#watch {
-    grid-column: 7;
-    grid-row: 5;
-    justify-self: end;
-    align-self: center;
-}
-#thirdIcon {
-    grid-column: 6;
-    grid-row: 5;
-    justify-self: end;
-    align-self: center;
-}*/
-
 .announcements {
     grid-column: 3;
     grid-row: 1 / 3;
@@ -212,8 +203,10 @@
     padding-bottom: 1rem;
     flex-grow: 1;
     height: 100%;
+    text-wrap: pretty;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
 }
-
 .announcementsGrouped {
     display: flex;
     flex-direction: column;
@@ -223,10 +216,15 @@
     margin-right: 1rem;
     padding-top: 1rem;
 }
-
+.announcements hr {
+    width: 80%;
+    color: black;
+}
 .trending {
     grid-column: 3;
     grid-row: 3 / 6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
 }
 .cardIconContainer {
     grid-column: 1 / -1;
@@ -238,6 +236,37 @@
     align-items: center;
     gap: 1rem;
 }
+/*TRENDING*/
+.trending {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+ }
+ .trendingTrioHolder {
+     display: flex;
+     margin: 1rem;
+     gap: 1rem;
+     align-items: center;
+     
+     
+ }
+ .trendingText {
+     display:flex;
+     flex-direction: column;
+ }
+ .trendingImg {
+     height: 4rem;
+     width: auto;
+     object-fit: contain;
+ }
+ .trendingAt {
+     font-size: .75rem;
+ }
+ .trendingProjectName {
+     font-size: 1rem;
+ }
+/*CARD POSITIONING*/
 #card1 {
     grid-column: 1;
     grid-row: 1 / 2;
@@ -262,38 +291,6 @@
     grid-column: 2;
     grid-row: 4 / 6;
 }
-.announcements hr {
-    width: 80%;
-    color: black;
-}
 
-/*TRENDING*/
-.trending {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: left;
-}
-.trendingTrioHolder {
-    display: flex;
-    margin: 1rem;
-    gap: 1rem;
-    align-items: center;
-    
-    
-}
-.trendingText {
-    display:flex;
-    flex-direction: column;
-}
-.trendingImg {
-    height: 4rem;
-    width: auto;
-    object-fit: contain;
-}
-.trendingAt {
-    font-size: .75rem;
-}
-.trendingProjectName {
-    font-size: 1rem;
-}
+
+
